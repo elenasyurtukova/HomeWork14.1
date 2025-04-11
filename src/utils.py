@@ -3,6 +3,7 @@ import json
 from src.category import Category
 from src.product import Product
 
+
 def func_read_file_json(path: str) -> list[dict]:
     """функция: читает данные из json-файла пользовательских настроек"""
     try:
@@ -17,21 +18,21 @@ def func_read_file_json(path: str) -> list[dict]:
         print("Файл не найден")
         return []
 
+
 def create_categories_from_json(data):
     """Функция создает объекты классов 'Категории' и 'Товары'"""
     categories = []
     for elem in data:
         products = []
-        for product in elem['products']:
+        for product in elem["products"]:
             products.append(Product(**product))
-        elem['products']  = products
+        elem["products"] = products
         categories.append(Category(**elem))
     return categories
 
 
-
 if __name__ == "__main__":
-    data = func_read_file_json('../data/products.json')
+    data = func_read_file_json("../data/products.json")
     print(data)
     categories = create_categories_from_json(data)
     print(categories[1].name)
