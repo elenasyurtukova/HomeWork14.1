@@ -16,6 +16,10 @@ class Category:
         Category.product_count += len(products) if products else 0
 
     @property
+    def products_in_list(self):
+        return self.__products
+
+    @property
     def products(self):
         products_str = ""
         for product in self.__products:
