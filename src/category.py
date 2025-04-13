@@ -22,6 +22,11 @@ class Category:
             products_str += f"{product.name}, {product.price} руб. Остаток: {product.quantity} шт.\n"
         return products_str
 
+    @products.setter
+    def add_product(self, product: Product):
+        self.__products.append(product)
+        Category.product_count += 1
+
 
 
 if __name__ == "__main__":
@@ -29,7 +34,11 @@ if __name__ == "__main__":
     prod_2 = Product("отрубной хлеб", "хлебобулочные изделия", 31.0, 5)
     prod_3 = Product("ржаной хлеб", "хлебобулочные изделия", 37.6, 7)
     category_1 = Category("хлеб", "хлебобулочные изделия", [prod_1, prod_2, prod_3])
+
+    prod_4 = Product("дарницкий хлеб", "хлебобулочные изделия", 39.6, 8)
+    category_1.add_product = prod_4
     print(category_1.products)
+    print(category_1.product_count)
 
 
 
