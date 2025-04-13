@@ -32,7 +32,6 @@ class Category:
         Category.product_count += 1
 
 
-
 if __name__ == "__main__":
     prod_1 = Product("белый хлеб", "хлебобулочные изделия", 35.5, 10)
     prod_2 = Product("отрубной хлеб", "хлебобулочные изделия", 31.0, 5)
@@ -43,6 +42,3 @@ if __name__ == "__main__":
     category_1.add_product = prod_4
     print(category_1.products)
     print(category_1.product_count)
-
-
-

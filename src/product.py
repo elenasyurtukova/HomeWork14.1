@@ -28,10 +28,9 @@ class Product:
 
 
 if __name__ == "__main__":
-    prod_1 = Product.new_product({"name": "белый хлеб",
-                                  "description": "хлебобулочные изделия",
-                                  "price": 35.5,
-                                  "quantity": 10})
+    prod_1 = Product.new_product(
+        {"name": "белый хлеб", "description": "хлебобулочные изделия", "price": 35.5, "quantity": 10}
+    )
 
     print(prod_1.name)
     print(prod_1.description)
@@ -39,4 +38,3 @@ if __name__ == "__main__":
     print(prod_1.quantity)
     prod_1.price = 15.1
     print(prod_1.price)
-
