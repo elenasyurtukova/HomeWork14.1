@@ -15,6 +15,12 @@ class Category:
         Category.category_count += 1
         Category.product_count += len(products) if products else 0
 
+    def __str__(self):
+        quantity = 0
+        for product in self.products_in_list:
+            quantity += product.quantity
+        return f"{self.name}, количество продуктов: {quantity} шт."
+
     @property
     def products_in_list(self):
         return self.__products
@@ -37,6 +43,7 @@ if __name__ == "__main__":
     prod_2 = Product("отрубной хлеб", "хлебобулочные изделия", 31.0, 5)
     prod_3 = Product("ржаной хлеб", "хлебобулочные изделия", 37.6, 7)
     category_1 = Category("хлеб", "хлебобулочные изделия", [prod_1, prod_2, prod_3])
+    print(category_1)
 
     prod_4 = Product("дарницкий хлеб", "хлебобулочные изделия", 39.6, 8)
     category_1.add_product = prod_4
