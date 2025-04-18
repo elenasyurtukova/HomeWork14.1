@@ -1,4 +1,7 @@
+import pytest
+
 from src.product import Product
+from tests.conftest import category_2
 
 
 def test_product_init(product):
@@ -24,3 +27,13 @@ def test_price_setter(capsys, product):
     assert message.out.strip() == "Цена не должна быть нулевая или отрицательная"
     product.price = 15.5
     assert product.price == 15.5
+
+def test_product_str(product):
+    assert str(product) == 'дюшес, 1.5 руб. Остаток: 10 шт.'
+
+def test_add_product(product):
+    assert product + Product("птичье молоко", "суфле", 10.0, 7) == 85.0
+
+def test_add_product_error(product, category_2):
+    with pytest.raises(ValueError, match="Невозможно сложить объекты разных типов"):
+        product + category_2

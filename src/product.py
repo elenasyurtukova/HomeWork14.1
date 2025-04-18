@@ -48,3 +48,4 @@ if __name__ == "__main__":
     # prod_1.price = 15.1
     # print(prod_1.price)
     print(prod_1 + prod_2)
+    print(prod_1 + 75)
