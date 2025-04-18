@@ -26,6 +26,7 @@ def test_category_products_setter(category_1, product):
     category_1.add_product = product
     assert len(category_1.products_in_list) == 4
 
+
 def test_category_str(category_1, category_2):
     assert str(category_1) == "хлеб, количество продуктов: 22 шт."
     assert str(category_2) == "конфеты, количество продуктов: 32 шт."
@@ -40,4 +41,3 @@ def test_product_iterator(product_iterator):
 
     with pytest.raises(StopIteration):
         next(product_iterator)
-
