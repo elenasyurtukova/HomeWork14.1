@@ -38,5 +38,5 @@ if __name__ == "__main__":
     # print(grass2.germination_period)
     # print(grass2.color)
 
-print(grass1 + grass2)
-print(grass1 + 10000)
+    print(grass1 + grass2)
+# print(grass1 + 10000)

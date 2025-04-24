@@ -27,6 +27,22 @@ def test_category_products_setter(category_1, product):
     assert len(category_1.products_in_list) == 4
 
 
+def test_category_products_setter_error(category_1, product):
+    with pytest.raises(TypeError):
+        category_1.add_product = 10
+
+
+def test_category_products_setter(category_1, smartphone1):
+    category_1.add_product = smartphone1
+    assert category_1.products_in_list[-1].name == 'Samsung Galaxy S23 Ultra'
+
+
+def test_category_products_setter(category_1, grass1):
+    category_1.add_product = grass1
+    assert category_1.products_in_list[-1].name == 'Газонная трава'
+
+
+
 def test_category_str(category_1, category_2):
     assert str(category_1) == "хлеб, количество продуктов: 22 шт."
     assert str(category_2) == "конфеты, количество продуктов: 32 шт."

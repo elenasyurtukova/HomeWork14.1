@@ -37,5 +37,5 @@ def test_add_product(product):
 
 
 def test_add_product_error(product, category_2):
-    with pytest.raises(ValueError, match="Невозможно сложить объекты разных типов"):
+    with pytest.raises(TypeError, match="Невозможно сложить объекты разных типов"):
         product + category_2

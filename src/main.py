@@ -70,7 +70,7 @@ if __name__ == '__main__':
     category_smartphones = Category("Смартфоны", "Высокотехнологичные смартфоны", [smartphone1, smartphone2])
     category_grass = Category("Газонная трава", "Различные виды газонной травы", [grass1, grass2])
 
-    category_smartphones.add_product(smartphone3)
+    category_smartphones.add_product = smartphone3
 
     print(category_smartphones.products)
 

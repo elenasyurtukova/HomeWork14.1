@@ -48,4 +48,4 @@ if __name__ == '__main__':
     # print(smartphone2.color)
 
     print(smartphone1 + smartphone2)
-    print(smartphone3 + 100000)
+    # print(smartphone3 + 100000)
