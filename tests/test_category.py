@@ -32,15 +32,14 @@ def test_category_products_setter_error(category_1, product):
         category_1.add_product = 10
 
 
-def test_category_products_setter(category_1, smartphone1):
+def test_category_products_setter_smartphone(category_1, smartphone1):
     category_1.add_product = smartphone1
-    assert category_1.products_in_list[-1].name == 'Samsung Galaxy S23 Ultra'
+    assert category_1.products_in_list[-1].name == "Samsung Galaxy S23 Ultra"
 
 
-def test_category_products_setter(category_1, grass1):
+def test_category_products_setter_grass(category_1, grass1):
     category_1.add_product = grass1
-    assert category_1.products_in_list[-1].name == 'Газонная трава'
-
+    assert category_1.products_in_list[-1].name == "Газонная трава"
 
 
 def test_category_str(category_1, category_2):
