@@ -30,11 +30,11 @@ class Product:
         return new_product
 
     def __add__(self, other):
-        if isinstance(other, Product):
+        if type(other) is Product:
             summ = self.price * self.quantity + other.price * other.quantity
             return summ
         else:
-            raise ValueError("Невозможно сложить объекты разных типов")
+            raise TypeError("Невозможно сложить объекты разных типов")
 
 
 if __name__ == "__main__":
