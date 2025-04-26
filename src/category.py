@@ -32,10 +32,13 @@ class Category:
             products_str += f"{str(product)}\n"
         return products_str
 
-    @products.setter
+
     def add_product(self, product: Product):
-        self.__products.append(product)
-        Category.product_count += 1
+        if isinstance(product, Product):
+            self.__products.append(product)
+            Category.product_count += 1
+        else:
+            raise TypeError
 
 
 if __name__ == "__main__":
@@ -46,6 +49,7 @@ if __name__ == "__main__":
     print(category_1)
 
     prod_4 = Product("дарницкий хлеб", "хлебобулочные изделия", 39.6, 8)
-    category_1.add_product = prod_4
+    print(type(prod_4))
+    category_1.add_product(prod_4)
     print(category_1.products)
     print(category_1.product_count)
