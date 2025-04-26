@@ -32,7 +32,6 @@ class Category:
             products_str += f"{str(product)}\n"
         return products_str
 
-
     def add_product(self, product: Product):
         if isinstance(product, Product):
             self.__products.append(product)
