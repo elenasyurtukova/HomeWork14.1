@@ -1,4 +1,8 @@
-class Product:
+from src.base_product import BaseProduct
+from src.print_mixin import PrintMixin
+
+
+class Product(BaseProduct, PrintMixin):
     name: str
     description: str
     price: float
@@ -9,6 +13,7 @@ class Product:
         self.description = description
         self.__price = price
         self.quantity = quantity
+        super().__init__()
 
     def __str__(self):
         return f"{self.name}, {self.price} руб. Остаток: {self.quantity} шт."
@@ -48,4 +53,4 @@ if __name__ == "__main__":
     # prod_1.price = 15.1
     # print(prod_1.price)
     print(prod_1 + prod_2)
-    print(prod_1 + 75)
+    # print(prod_1 + 75)
