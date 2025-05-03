@@ -40,6 +40,20 @@ class Category:
             raise TypeError
 
 
+    def middle_price(self):
+        try:
+            sum = 0
+            for product in self.products_in_list:
+                sum += product.price
+            middle_price = round(sum/len(self.__products), 2)
+        except ZeroDivisionError:
+            middle_price = 0.00
+        return middle_price
+
+
+
+
+
 if __name__ == "__main__":
     prod_1 = Product("белый хлеб", "хлебобулочные изделия", 35.5, 10)
     prod_2 = Product("отрубной хлеб", "хлебобулочные изделия", 31.0, 5)
