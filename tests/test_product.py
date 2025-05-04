@@ -11,8 +11,9 @@ def test_product_init(product):
     assert product.price == 1.5
     assert product.quantity == 10
 
+
 def test_product_init_error():
-    with pytest.raises(ValueError, match = 'Товар с нулевым количеством не может быть добавлен'):
+    with pytest.raises(ValueError, match="Товар с нулевым количеством не может быть добавлен"):
         Product("барбарис", "леденцы", 1.8, 0)
 
 

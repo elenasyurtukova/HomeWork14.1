@@ -57,6 +57,7 @@ def test_product_iterator(product_iterator):
     with pytest.raises(StopIteration):
         next(product_iterator)
 
+
 def test_products_middle_price(category_2):
     assert category_2.middle_price() == 5.0
 

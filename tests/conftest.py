@@ -32,6 +32,7 @@ def category_2():
         ],
     )
 
+
 @pytest.fixture
 def category_3():
     return Category(
