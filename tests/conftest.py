@@ -34,6 +34,15 @@ def category_2():
 
 
 @pytest.fixture
+def category_3():
+    return Category(
+        name="конфеты",
+        description="конфеты и шоколад",
+        products=[],
+    )
+
+
+@pytest.fixture
 def product():
     return Product("дюшес", "леденцы", 1.5, 10)
 
